@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GAME</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>
+
+    <body>
+        <section class="hero is-dark">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Rock Paper Scissors
+              </h1>
+              <h2 class="subtitle">
+                Game
+              </h2>
+            </div>
+          </div>
+        </section>
+
+            <div class="box has-text-centered blue">
+                <button id="newGameButton" class="button button-custom is-focused is-large is-primary is-rounded">New Game</button>
+            </div>
+        
+            <div id="gameElements">
+                <div class="buttons is-centered">
+                    <p class="control">
+                        <button id="pickRock" class="button is-large is-link">Rock</button>
+                    </p>
+                    <p class="control">
+                        <button id="pickScissors" class="button is-large is-info">Scissors</button>
+                    </p>
+                    <p class="control">
+                        <button id="pickPaper" class="button is-large is-dark">Paper</button>
+                    </p>
+                </div>
+
+                <div class="container">
+                    <div>
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <p id="playerName" class="tag is-size-3 is-capitalized has-text-centered">Player Name</p>
+                            </div>
+                            <div class="column is-centered is-half">
+                                <p class="tag is-size-3 is-capitalized has-text-centered">Computer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="columns is-centered">
+                            <div id="playerPick" class="column is-half is-centered">
+                                <p class="is-size-3 is-capitalized has-text-centered"></p>
+                            </div>
+                            <div id="computerPick" class="column is-centered">
+                                <p class="is-size-3 is-capitalized has-text-centered"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <p id="playerPoints" class="is-size-3 is-capitalized has-text-centered"></p>
+                            </div>
+                            <div id="computerPoints" class="column is-half">
+                                <p class="is-size-3 is-capitalized has-text-centered"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gameResult">
+                <div class="column is-centered">
+                    <div>
+                        <p id="gameWinner" class="is-size-3 is-capitalized has-text-centered"></p>
+                    </div>
+                    <div class="box has-text-centered">
+                        <button id="playGameButton" class="button button-custom is-focused is-large is-primary is-rounded">New Game</button>
+                    </div>
+                </div>          
+            </div>
+        </section>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+</html>
+
