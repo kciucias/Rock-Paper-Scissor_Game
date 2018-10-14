@@ -22,12 +22,14 @@
           </div>
         </section>
 
-            <div class="box has-text-centered blue">
+        <section>
+            <div class="box has-text-centered blue button-star">
                 <button id="newGameButton" class="button button-custom is-focused is-large is-primary is-rounded">New Game</button>
             </div>
         
-            <div id="gameElements">
-                <div class="buttons is-centered">
+            <div id="gameElements"> <!--gameElements-->
+
+                <div class="buttons is-centered"> <!--rock, scissors, paper buttons-->
                     <p class="control">
                         <button id="pickRock" class="button is-large is-link">Rock</button>
                     </p>
@@ -39,47 +41,52 @@
                     </p>
                 </div>
 
-                <div class="container">
-                    <div>
+                <div class="container is-widescreen">
+                    <div> <!--names-->
                         <div class="columns is-centered">
-                            <div class="column is-half">
+                            <div class="column is-half center">
                                 <p id="playerName" class="tag is-size-3 is-capitalized has-text-centered">Player Name</p>
                             </div>
-                            <div class="column is-centered is-half">
+                            <div class="column is-centered is-half center">
                                 <p class="tag is-size-3 is-capitalized has-text-centered">Computer</p>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div> <!--picks-->
                         <div class="columns is-centered">
-                            <div id="playerPick" class="column is-half is-centered">
+                            <div id="playerPick" class="column is-one-third is-centered center">
                                 <p class="is-size-3 is-capitalized has-text-centered"></p>
                             </div>
-                            <div id="computerPick" class="column is-centered">
+                            <div id="roundScore" class="column is-one-third is-centered center">
+                                <p class="is-size-3 is-capitalized has-text-centered"></p>
+                            </div>
+                            <div id="computerPick" class="column is-one-third is-centered center">
                                 <p class="is-size-3 is-capitalized has-text-centered"></p>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div> <!--points-->
                         <div class="columns is-centered">
-                            <div class="column is-half">
-                                <p id="playerPoints" class="is-size-3 is-capitalized has-text-centered"></p>
+                            <div class="column is-half center">
+                                <p id="playerPoints" class="tag is-size-4 is-capitalized has-text-centered"></p>
                             </div>
-                            <div id="computerPoints" class="column is-half">
-                                <p class="is-size-3 is-capitalized has-text-centered"></p>
+                            <div class="column is-half center">
+                                <p id="computerPoints" class="tag is-size-4 is-capitalized has-text-centered"></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="gameResult">
-                <div class="column is-centered">
-                    <div>
+                <div class="column is-centered center"> <!--results-->
+                    <div class="column is-half center">
                         <p id="gameWinner" class="is-size-3 is-capitalized has-text-centered"></p>
                     </div>
+
                     <div class="box has-text-centered">
-                        <button id="playGameButton" class="button button-custom is-focused is-large is-primary is-rounded">New Game</button>
+                        <button id="playAgainBtn" class="button button-custom is-focused is-large is-primary is-rounded">Play Again</button>
                     </div>
+
                 </div>          
             </div>
         </section>

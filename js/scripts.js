@@ -1,5 +1,5 @@
 var newGameBtn = document.getElementById('newGameButton');
-    playGameBtn = document.getElementById('playGameButton');
+    playAgainBtn = document.getElementById('playAgainButton');
     playerName = document.getElementById('playerName');
     pickRock = document.getElementById('pickRock');
     pickPaper = document.getElementById('pickPaper');
@@ -17,21 +17,14 @@ var newGameBtn = document.getElementById('newGameButton');
     var computerPoints = 0;
     var playerPoints = 0;
 
-/*function init() {
-    //playerPointsDOM.textContent = '0';
-    //computerPointsDOM.textContent = '0'; 
-    document.querySelector('#gameElements').style.display = 'none';
-    document.querySelector('#gameResult').style.display = 'none';
-    playerName.innerHTML ='';
-}*/
-    gameElements.style.display = 'none';
-    playerPointsDOM.textContent = '0';
-    computerPointsDOM.textContent = '0';
-    document.querySelector('#gameResult').style.display = 'none';
-
+// start
+gameElements.style.display = 'none';
+playerPointsDOM.textContent = '0';
+computerPointsDOM.textContent = '0';
+gameResultDOM.style.display = 'none';
 
 // start a new game
-document.getElementById('newGameButton').addEventListener('click', newGame);
+newGameBtn.addEventListener('click', newGame);
 
 function newGame() {
     var name = prompt('Please enter your name');
@@ -41,15 +34,6 @@ function newGame() {
     gameElements.style.display = 'block';
 };
 
-playGameBtn.addEventListener('click', playAgain);
-function playAgain() {
-    gameElements.style.display = 'block';
-    playerName.textContent = 'player';
-    playerPointsDOM.textContent = '0';
-    computerPointsDOM.textContent = '0';
-    gameResult.style.display = 'none';
-    newGameButton.style.display = 'block';
-}
 
 // player pick 
 pickRock.addEventListener('click', function() { playerPick('rock'); });
@@ -75,8 +59,6 @@ function playerPick(playerPick) {
 }
 
 
-
-
 function checkRoundWinner(computerPick, playerPick) {
     if (playerPick === "paper" && computerPick === 'rock' ||
         playerPick === "rock" && computerPick === "scissors" ||
@@ -95,20 +77,33 @@ function checkRoundWinner(computerPick, playerPick) {
 };
 
 function checkGameWinner() {
-    if (playerPoints == 3) {
+    if (playerPoints == 10) {
         gameElements.style.display = 'none';
         gameResult.style.display = 'block';
         gameWinner.innerHTML = 'You win!';
-    } else if (computerPoints == 3) {
+    } else if (computerPoints == 10) {
         gameElements.style.display = 'none';
         gameResultDOM.style.display = 'block';
         gameWinner.innerHTML = 'You lose!';
     }
-    playGameBtn.style.display = 'block';
     newGameBtn.style.display = 'none';
 }
 
 
+playAgainBtn.addEventListener('click', playAgain);
+function playAgain() {
+    gameResultDOM.style.display = 'none';
+    gameElements.style.display = 'block';
+    newGameBtn.style.display = 'block';
+    playerPointsDOM.textContent = '0';
+    computerPointsDOM.textContent = '0';
+    var computerPoints = 0;
+    var playerPoints = 0;
+    roundScoreDOM.textContent = '';
+    playerPickDOM.textContent = '';
+    computerPickDOM.textContent = '';
+    playerName.textContent = '';
+}
 
 
 

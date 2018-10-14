@@ -3,13 +3,33 @@ body {
   background: #81ecec;
   font-family: "Source Sans Pro", sans-serif;
   width: 100%;
+  height: 100vh;
+}
+
+section {
+  background: #81ecec;
 }
 
 .blue {
   background: #81ecec;
 }
 
+.button-start {
+  padding-top: 30px;
+}
+
 #newGame {
   color: #6c5ce7;
+}
+
+.center {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
