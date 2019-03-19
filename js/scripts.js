@@ -17,11 +17,12 @@ var newGameBtn = document.getElementById('newGameButton'),
     var computerPoints = 0;
     var playerPoints = 0;
 
-// start
-gameElements.style.display = 'none';
-playerPointsDOM.textContent = '0';
-computerPointsDOM.textContent = '0';
-gameResultDOM.style.display = 'none';
+
+    //gameElements.style.display = 'none';
+    //playerPointsDOM.textContent = '0';
+    //computerPointsDOM.textContent = '0';
+    //gameResultDOM.style.display = 'none';
+
 
 // start a new game
 newGameBtn.addEventListener('click', newGame);
@@ -31,7 +32,7 @@ function newGame() {
     if (name != null) {
         playerName.textContent = name;
     }
-    gameElements.style.display = 'block';
+    //gameElements.style.display = 'block';
 };
 
 
@@ -43,9 +44,9 @@ pickScissors.addEventListener('click', function() { playerPick('scissors'); });
 function getComputerPick() {
     var getNumber = Math.floor(Math.random() * 3);
     if (getNumber == 1) {
-        return 'scissors';
-    } else if (getNumber == 2) {
         return 'paper';
+    } else if (getNumber == 3) {
+        return 'scissors';
     } else {
         return 'rock';
     }
@@ -57,6 +58,7 @@ function playerPick(playerPick) {
     playerPickDOM.innerHTML = '<span class="icon"><i class="fa fa-hand-' + playerPick + '-o" aria-hidden="true"></i></span>' + playerPick;
     checkRoundWinner(computerPick, playerPick);
 }
+
 
 
 function checkRoundWinner(computerPick, playerPick) {
@@ -77,11 +79,11 @@ function checkRoundWinner(computerPick, playerPick) {
 };
 
 function checkGameWinner() {
-    if (playerPoints == 10) {
+    if (playerPoints == 5) {
         gameElements.style.display = 'none';
         gameResult.style.display = 'block';
-        gameWinner.innerHTML = 'You win!';
-    } else if (computerPoints == 10) {
+        gameWinner.innerHTML = 'You win the entire Game!';
+    } else if (computerPoints == 5) {
         gameElements.style.display = 'none';
         gameResultDOM.style.display = 'block';
         gameWinner.innerHTML = 'You lose!';
@@ -89,6 +91,8 @@ function checkGameWinner() {
     newGameBtn.style.display = 'none';
 }
 
+
+/*
 
 playAgainBtn.addEventListener('click', playAgain);
 function playAgain() {
@@ -103,6 +107,7 @@ function playAgain() {
     playerName.textContent = '';
 }
 
+*/
 
 
 

@@ -1,12 +1,48 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
-body { background: #81ecec; font-family: "Source Sans Pro", sans-serif; width: 100%; height: 100vh; }
+body {
+  background: #81ecec;
+  font-family: "Source Sans Pro", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
 
-section { background: #81ecec; }
+section {
+  background: #81ecec;
+}
 
-.blue { background: #81ecec; }
+.blue {
+  background: #81ecec;
+}
 
-.button-start { padding-top: 30px; }
+.button-start {
+  padding-top: 30px;
+  height: 100vh;
+}
 
-#newGame { color: #6c5ce7; }
+#newGame {
+  color: #6c5ce7;
+}
 
-.center { display: -ms-flexbox; display: flex; height: 100%; width: 100%; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; }
+.center {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.rock {
+  background-image: url("http://hannahch.com/images/rock.svg");
+}
+
+.paper {
+  background-image: url("http://hannahch.com/images/paper.svg");
+}
+
+.scissors {
+  background-image: url("http://hannahch.com/images/scissors.svg");
+}
+/*# sourceMappingURL=style.css.map */
